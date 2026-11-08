@@ -1,6 +1,8 @@
 # Airbnb Analytics dbt Project
 
-A dbt and Snowflake data pipeline that transforms Airbnb listing, host, and booking data into analytics-ready models. The project organizes transformations into bronze, silver, and gold layers, with snapshot models for tracking changes over time.
+## Project summary
+
+This project is an end-to-end analytics engineering pipeline built with dbt and Snowflake for Airbnb booking, listing, and host data. It ingests the three entities from the `AIRBNB.STAGING` schema, incrementally processes them through bronze and silver models, and combines the results into gold-layer reporting tables. dbt snapshots preserve historical changes to bookings, listings, and hosts, supporting analysis of both current data and prior states. The project also uses reusable SQL macros and ephemeral models to keep transformations modular and maintainable.
 
 ## Pipeline overview
 
